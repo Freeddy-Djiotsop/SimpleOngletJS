@@ -6,7 +6,7 @@
 
 a{
     text-decoration: none;/*Ainsi les lien ne sont pas souligne*/
-    color: inherit;/*il n'ont pas la cpuleur par defaut*/
+    color: inherit;/*ils n'ont pas la couleur par defaut*/
 }
 
 ul.tabs, .tabs li{
