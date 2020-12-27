@@ -1,0 +1,66 @@
+.body{
+    background-color: #EEE;
+    font-family: sans-serif;
+    padding: 50px;
+}
+
+a{
+    text-decoration: none;/*Ainsi les lien ne sont pas souligne*/
+    color: inherit;/*il n'ont pas la cpuleur par defaut*/
+}
+
+ul.tabs, .tabs li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.tabs li{
+    float: left;
+    display: block;
+}
+
+.tabs:after{/*pour positioner le contenu apres tabs*/
+    display: table;
+    content: " ";
+    clear: both;/*nettoie les precedent float, donc ils n'ont plus effets ici*/
+}
+
+.tabs a{
+    display: inline-block;/*pour que les a soient parfaitement aligne*/
+    background-color: #EEE;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    padding: 10px 15px;
+}
+
+.tabs .active a{/*met plus en evidence l'onglet sur lequel nous sommes*/
+    background-color: #fff
+}
+
+.tabs-content{
+    position: relative;
+    z-index: 3;/*l'onglet et le contenu s'emboite, si tu ne comprends pas ceque xa veut dire tu peux tjrs l'enlever et voir a quoi l'onglet et le contenu seront different*/
+    padding: 20px;
+    background: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    margin-bottom: 20px;
+}
+
+.tab-content{/*enleve tous les contenues des onglets*/
+    display: none;
+}
+
+.tab-content.active{/*Permet de juste afficher le contenu*/
+    display: block;
+}
+
+/*Pour avoir une amimation lors du changement d'onglet*/
+.fade{
+    opacity: 0;
+    transition: opacity 5s;
+}
+
+.fade.in{
+    opacity: 1;
+}
+
